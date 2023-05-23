@@ -35,6 +35,14 @@ export const ReservationCreate = () => {
     }
   };
 
+  const handleChange = (event) => {
+    const numericValue = event.target.value.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+    setReservation({
+      ...reservation,
+      [event.target.name]: Number(numericValue)
+    });
+  };
+
   const submitHandler = async (event) => {
     event.preventDefault();
     const abortController = new AbortController();
@@ -62,6 +70,7 @@ export const ReservationCreate = () => {
         reservation={reservation}
         changeHandler={changeHandler}
         submitHandler={submitHandler}
+        handleChange={handleChange}
       />
     </section>
   );

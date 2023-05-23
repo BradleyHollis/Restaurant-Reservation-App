@@ -5,6 +5,7 @@ export const ReservationForm = ({
   reservation,
   changeHandler,
   submitHandler,
+  handleChange
 }) => {
   const history = useHistory();
 
@@ -45,7 +46,7 @@ export const ReservationForm = ({
               required={true}
               value={reservation.mobile_number}
               maxLength="100"
-              onChange={changeHandler}
+              onChange={handleChange}
             />
           </div>
           <div>
