@@ -81,7 +81,7 @@ export const ReservationEdit = () => {
         reservation={reservation}
         changeHandler={changeHandler}
         submitHandler={submitHandler}
-        handleChange={changeHandler}
+        handleChange={handleChange}
       />
     </section>
   );
